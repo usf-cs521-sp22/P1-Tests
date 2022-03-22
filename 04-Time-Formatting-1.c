@@ -16,11 +16,11 @@ subtest("Comparing output against known values",
 {
     char buf[128];
     simple_time_format(buf, 128, 0);
-    test_assert_str(buf, "==", "Jan 01 1970", 128);
+    test_assert_str(buf, "==", "Dec 31 1969", 128);
     test_printf("%s\n", buf);
 
     simple_time_format(buf, 128, 1646455768);
-    test_assert_str(buf, "==", "Mar 05 2022", 128);
+    test_assert_str(buf, "==", "Mar 04 2022", 128);
     test_printf("%s\n", buf);
 
     simple_time_format(buf, 128, 533472040);
@@ -28,7 +28,7 @@ subtest("Comparing output against known values",
     test_printf("%s\n", buf);
 
     simple_time_format(buf, 128, 9533472040);
-    test_assert_str(buf, "==", "Feb 08 2272", 128);
+    test_assert_str(buf, "==", "Feb 07 2272", 128);
     test_printf("%s\n", buf);
 
     simple_time_format(buf, 128, 936893349);
